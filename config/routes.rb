@@ -1,6 +1,7 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  resources :booking_types
   resources :bookings
 
   authenticate :user, ->(u) { u.admin? } do
