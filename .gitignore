@@ -39,3 +39,6 @@
 .docker/dbdata
 yarn-error.log
 .docker/redis_data
+
+# Ignore application configuration
+/config/application.yml
