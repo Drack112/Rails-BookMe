@@ -57,7 +57,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_25_205542) do
     t.string "location"
     t.string "color", default: "#000000"
     t.integer "duration"
-    t.boolean "paymemt_required", default: false
+    t.boolean "payment_required", default: false
     t.integer "price"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
