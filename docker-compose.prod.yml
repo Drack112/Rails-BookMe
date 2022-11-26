@@ -37,6 +37,18 @@ services:
     networks:
       - rails
 
+  redis:
+    build: .docker/redis
+    container_name: "redis-rails-dev-bookme"
+    restart: always
+    ports:
+      - "6379:6379"
+    command: redis-server
+    volumes:
+      - .docker/redis_data/cache:/data
+    networks:
+      - rails
+
 networks:
   rails:
     driver: bridge

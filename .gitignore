@@ -38,3 +38,4 @@
 .env
 .docker/dbdata
 yarn-error.log
+.docker/redis_data

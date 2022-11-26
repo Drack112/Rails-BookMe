@@ -3,12 +3,13 @@ version: "3"
 services:
   app:
     container_name: "ruby-on-rails-dev-bookme"
-    entrypoint: "dockerize -wait tcp://db:5432 .docker/entrypoints/dev.sh"
+    entrypoint: "dockerize -wait tcp://db:5432 -wait tcp://redis:6379 --timeout 40s .docker/entrypoints/dev.sh"
     build:
       context: .
       dockerfile: Dockerfile
     depends_on:
       - db
+      - redis
     ports:
       - "3000:3000"
     networks:
@@ -34,6 +35,18 @@ services:
       - POSTGRES_USER=${DATABASE_USER}
     env_file:
       - ./.env
+    networks:
+      - rails
+
+  redis:
+    build: .docker/redis
+    container_name: "redis-rails-dev-bookme"
+    restart: always
+    ports:
+      - "6379:6379"
+    command: redis-server
+    volumes:
+      - .docker/redis_data/cache:/data
     networks:
       - rails
 
