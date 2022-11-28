@@ -39,7 +39,7 @@ services:
 
   redis:
     build: .docker/redis
-    container_name: "redis-rails-dev-bookme"
+    container_name: "redis-rails-prod-bookme"
     restart: always
     ports:
       - "6379:6379"

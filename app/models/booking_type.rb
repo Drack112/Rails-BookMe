@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class BookingType < ApplicationRecord
   belongs_to :user
   has_rich_text :description

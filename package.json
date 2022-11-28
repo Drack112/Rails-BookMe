@@ -16,12 +16,9 @@
     "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --minify"
   },
   "devDependencies": {
-    "@prettier/plugin-ruby": "^3.2.2",
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/forms": "^0.5.2",
     "@tailwindcss/line-clamp": "^0.4.0",
-    "@tailwindcss/typography": "^0.5.4",
-    "prettier": "^2.8.0",
-    "prettier-plugin-erb": "^0.4.0"
+    "@tailwindcss/typography": "^0.5.4"
   }
 }

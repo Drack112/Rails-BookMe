@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 module BookingTypesHelper
   def duration(type)
     if type.duration == 60
-      "1 hour"
+      '1 hr'
     else
-      type.duration.to_formatted_s + " minutes"
+      "#{type.duration.to_formatted_s} mins"
     end
   end
 end

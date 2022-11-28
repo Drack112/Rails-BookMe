@@ -5,7 +5,7 @@ one:
   location: MyString
   color: MyString
   duration: 1
-  paymemt_required: false
+  payment_required: false
   price: 1
   user: one
 
@@ -14,6 +14,6 @@ two:
   location: MyString
   color: MyString
   duration: 1
-  paymemt_required: false
+  payment_required: false
   price: 1
   user: two
